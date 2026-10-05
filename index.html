@@ -1,0 +1,2639 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GUIA AI - Simplifying Indian Bureaucracy through Artificial Intelligence</title>
+    <meta name="description" content="Get simple, step-by-step English guidance for official Indian government paperwork without relying on middle agents." />
+    <meta property="og:title" content="GUIA AI - Simplifying Indian Bureaucracy through Artificial Intelligence" />
+    <meta property="og:description" content="Get simple, step-by-step English guidance for official Indian government paperwork without relying on middle agents." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      /* --- CSS Variables & Theme (Deep Royal Navy, Emerald, Soft Gold & Cyan) --- */
+      :root {
+        --bg-navy-dark: #0B132B;
+        --bg-navy-light: #1C2541;
+        --bg-navy-surface: #223055;
+        --accent-emerald: #10B981;
+        --accent-emerald-hover: #059669;
+        --accent-cyan: #38BDF8;
+        --accent-gold: #F59E0B;
+        --text-primary: #FFFFFF;
+        --text-secondary: #CBD5E1;
+        --text-muted: #94A3B8;
+        --glass-bg: rgba(28, 37, 65, 0.72);
+        --glass-border: rgba(56, 189, 248, 0.16);
+        --glass-border-focus: rgba(16, 185, 129, 0.5);
+        --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        --shadow-glow: 0 0 20px rgba(56, 189, 248, 0.2);
+        --shadow-emerald-glow: 0 0 20px rgba(16, 185, 129, 0.25);
+        --radius-lg: 18px;
+        --radius-md: 12px;
+        --radius-sm: 8px;
+        --font-poppins: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+
+      /* Base Resets & Typography */
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        font-family: var(--font-poppins);
+        background-color: var(--bg-navy-dark);
+        color: var(--text-primary);
+        line-height: 1.6;
+      }
+
+      body {
+        min-height: 100vh;
+        overflow-x: hidden;
+        background: radial-gradient(circle at 15% 15%, #19274e 0%, var(--bg-navy-dark) 55%),
+                    radial-gradient(circle at 85% 85%, #132247 0%, var(--bg-navy-dark) 50%);
+        background-attachment: fixed;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      button {
+        font-family: inherit;
+        cursor: pointer;
+        border: none;
+        background: none;
+      }
+
+      input, textarea {
+        font-family: inherit;
+        color: inherit;
+      }
+
+      :focus-visible {
+        outline: 2px solid var(--accent-cyan);
+        outline-offset: 3px;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* Section Common Styles */
+      section {
+        padding: 90px 0;
+        position: relative;
+      }
+
+      .section-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: var(--accent-cyan);
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 12px;
+      }
+
+      .section-title {
+        font-size: clamp(2rem, 3.5vw, 2.75rem);
+        font-weight: 700;
+        line-height: 1.25;
+        margin-bottom: 16px;
+        color: var(--text-primary);
+      }
+
+      .section-title span.highlight {
+        color: var(--accent-emerald);
+        background: linear-gradient(120deg, var(--accent-emerald), var(--accent-cyan));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .section-subtitle {
+        color: var(--text-secondary);
+        font-size: 1.05rem;
+        max-width: 680px;
+        margin-bottom: 40px;
+      }
+
+      /* Glassmorphism Card Base */
+      .glass-card {
+        background: var(--glass-bg);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border: 1px solid var(--glass-border);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-soft);
+        transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .glass-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(56, 189, 248, 0.35);
+        box-shadow: var(--shadow-glow);
+      }
+
+      /* Sticky Navbar */
+      .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(11, 19, 43, 0.85);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(56, 189, 248, 0.12);
+        padding: 12px 0;
+        transition: all 0.3s ease;
+      }
+
+      .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      /* Brand Lockup */
+      .brand-lockup {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cloud-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        background: rgba(56, 189, 248, 0.12);
+        color: var(--accent-cyan);
+        border: 1px solid rgba(56, 189, 248, 0.28);
+        border-radius: 999px;
+        padding: 2px 10px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        margin-bottom: 2px;
+        box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+      }
+
+      .brand-title {
+        font-size: 1.55rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        background: linear-gradient(90deg, #FFFFFF, var(--accent-cyan));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: transform 0.3s ease;
+      }
+
+      .brand-lockup:hover .brand-title {
+        transform: translateY(-1px);
+      }
+
+      /* Hover Interaction & Smooth Animation on Branding Tagline */
+      .nav-tagline {
+        font-size: 0.68rem;
+        color: var(--text-muted);
+        letter-spacing: 0.2px;
+        display: none;
+        transition: color 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                    letter-spacing 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                    text-shadow 0.35s ease,
+                    opacity 0.35s ease;
+        transform-origin: left center;
+        will-change: transform, color, letter-spacing;
+      }
+
+      @keyframes taglineGlowPulse {
+        0%, 100% {
+          opacity: 0.95;
+          text-shadow: 0 0 8px rgba(56, 189, 248, 0.6), 0 0 16px rgba(16, 185, 129, 0.35);
+        }
+        50% {
+          opacity: 1;
+          text-shadow: 0 0 14px rgba(56, 189, 248, 0.85), 0 0 24px rgba(16, 185, 129, 0.55);
+        }
+      }
+
+      .brand-lockup:hover .nav-tagline,
+      .nav-tagline:hover {
+        color: var(--accent-cyan);
+        letter-spacing: 0.55px;
+        transform: translateX(4px);
+        animation: taglineGlowPulse 2.2s infinite ease-in-out;
+      }
+
+      @media (min-width: 900px) {
+        .nav-tagline {
+          display: block;
+        }
+      }
+
+      /* Parallax Scrolling Abstract Geometric Pattern */
+      .parallax-geometric-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 0;
+      }
+
+      .parallax-layer {
+        position: absolute;
+        top: -15vh;
+        left: 0;
+        width: 100vw;
+        height: 130vh;
+        will-change: transform;
+        pointer-events: none;
+      }
+
+      .parallax-layer-deep {
+        opacity: 0.16;
+      }
+
+      .parallax-layer-mid {
+        opacity: 0.11;
+      }
+
+      .parallax-layer-front {
+        opacity: 0.08;
+      }
+
+      main {
+        position: relative;
+        z-index: 1;
+      }
+
+      .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        list-style: none;
+      }
+
+      .nav-link {
+        color: var(--text-secondary);
+        font-size: 0.92rem;
+        font-weight: 500;
+        position: relative;
+        padding: 6px 0;
+        transition: color 0.2s ease;
+      }
+
+      .nav-link:hover, .nav-link.active {
+        color: var(--accent-cyan);
+      }
+
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--accent-emerald);
+        transition: width 0.25s ease;
+        border-radius: 2px;
+      }
+
+      .nav-link:hover::after, .nav-link.active::after {
+        width: 100%;
+      }
+
+      .nav-btn-chat {
+        background: linear-gradient(135deg, var(--accent-emerald), #059669);
+        color: #ffffff;
+        padding: 8px 18px;
+        border-radius: var(--radius-sm);
+        font-size: 0.88rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .nav-btn-chat:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(16, 185, 129, 0.45);
+      }
+
+      /* Hamburger Menu */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 32px;
+        height: 26px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 110;
+      }
+
+      .hamburger span {
+        width: 100%;
+        height: 3px;
+        background: var(--text-primary);
+        border-radius: 4px;
+        transition: all 0.3s ease;
+      }
+
+      .hamburger[aria-expanded="true"] span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      .hamburger[aria-expanded="true"] span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger[aria-expanded="true"] span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+
+      /* Hero / Home Section */
+      #home {
+        padding-top: 70px;
+        padding-bottom: 90px;
+        text-align: center;
+      }
+
+      .hero-content {
+        max-width: 860px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(16, 185, 129, 0.12);
+        color: var(--accent-emerald);
+        border: 1px solid rgba(16, 185, 129, 0.28);
+        padding: 6px 16px;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        margin-bottom: 24px;
+      }
+
+      .hero-headline {
+        font-size: clamp(2.3rem, 5vw, 3.6rem);
+        font-weight: 700;
+        line-height: 1.18;
+        margin-bottom: 20px;
+        text-wrap: balance;
+      }
+
+      .hero-subtitle {
+        font-size: clamp(1.05rem, 2vw, 1.25rem);
+        color: var(--text-secondary);
+        line-height: 1.6;
+        margin-bottom: 38px;
+        max-width: 720px;
+        text-wrap: balance;
+      }
+
+      /* Hero Big Search Box */
+      .search-box-wrapper {
+        width: 100%;
+        max-width: 680px;
+        margin-bottom: 24px;
+      }
+
+      .search-form {
+        display: flex;
+        background: var(--bg-navy-light);
+        border: 2px solid rgba(56, 189, 248, 0.25);
+        border-radius: var(--radius-lg);
+        padding: 6px;
+        box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.6), var(--shadow-glow);
+        transition: border-color 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .search-form:focus-within {
+        border-color: var(--accent-emerald);
+        box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.6), var(--shadow-emerald-glow);
+      }
+
+      .search-icon-prefix {
+        display: flex;
+        align-items: center;
+        padding-left: 14px;
+        color: var(--accent-cyan);
+      }
+
+      .search-input {
+        flex: 1;
+        background: transparent;
+        border: none;
+        padding: 14px 16px;
+        font-size: 1rem;
+        color: #ffffff;
+        min-width: 0;
+      }
+
+      .search-input::placeholder {
+        color: var(--text-muted);
+      }
+
+      .search-btn {
+        background: linear-gradient(135deg, var(--accent-emerald), #059669);
+        color: #ffffff;
+        font-size: 0.98rem;
+        font-weight: 600;
+        padding: 0 28px;
+        border-radius: var(--radius-md);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+      }
+
+      .search-btn:hover {
+        background: linear-gradient(135deg, #10B981, #047857);
+        transform: scale(1.02);
+      }
+
+      /* Quick Chips */
+      .quick-chips-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .chips-label {
+        font-size: 0.82rem;
+        color: var(--text-muted);
+        margin-right: 4px;
+      }
+
+      .quick-chip {
+        background: rgba(28, 37, 65, 0.9);
+        border: 1px solid rgba(56, 189, 248, 0.25);
+        color: var(--text-secondary);
+        font-size: 0.85rem;
+        font-weight: 500;
+        padding: 7px 15px;
+        border-radius: 999px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.2s ease;
+      }
+
+      .quick-chip:hover {
+        background: rgba(56, 189, 248, 0.15);
+        color: var(--accent-cyan);
+        border-color: var(--accent-cyan);
+        transform: translateY(-2px);
+      }
+
+      /* Document Services Grid */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 24px;
+      }
+
+      .service-card {
+        padding: 30px 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .service-icon-box {
+        width: 52px;
+        height: 52px;
+        border-radius: var(--radius-md);
+        background: rgba(56, 189, 248, 0.12);
+        color: var(--accent-cyan);
+        border: 1px solid rgba(56, 189, 248, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+      }
+
+      .service-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: #ffffff;
+      }
+
+      .service-desc {
+        color: var(--text-secondary);
+        font-size: 0.92rem;
+        line-height: 1.6;
+        margin-bottom: 24px;
+        flex-grow: 1;
+      }
+
+      .service-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .btn-ask-chat {
+        background: linear-gradient(135deg, var(--accent-emerald), #059669);
+        color: #ffffff;
+        font-size: 0.9rem;
+        font-weight: 600;
+        padding: 10px 16px;
+        border-radius: var(--radius-sm);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        transition: transform 0.2s ease, background-color 0.2s ease;
+      }
+
+      .btn-ask-chat:hover {
+        transform: translateY(-1px);
+        background: linear-gradient(135deg, #10B981, #047857);
+      }
+
+      .btn-official-site {
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--accent-cyan);
+        border: 1px solid rgba(56, 189, 248, 0.25);
+        font-size: 0.88rem;
+        font-weight: 500;
+        padding: 9px 16px;
+        border-radius: var(--radius-sm);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        transition: all 0.2s ease;
+      }
+
+      .btn-official-site:hover {
+        background: rgba(56, 189, 248, 0.12);
+        border-color: var(--accent-cyan);
+        color: #ffffff;
+      }
+
+      /* Future Roadmap */
+      .roadmap-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 20px;
+      }
+
+      .roadmap-card {
+        padding: 24px;
+        border-left: 4px solid var(--accent-cyan);
+      }
+
+      .roadmap-card:nth-child(2) {
+        border-left-color: var(--accent-emerald);
+      }
+      .roadmap-card:nth-child(3) {
+        border-left-color: var(--accent-gold);
+      }
+      .roadmap-card:nth-child(4) {
+        border-left-color: #A78BFA;
+      }
+      .roadmap-card:nth-child(5) {
+        border-left-color: var(--accent-cyan);
+      }
+
+      .roadmap-number {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--text-muted);
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .roadmap-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 8px;
+      }
+
+      .roadmap-desc {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        line-height: 1.5;
+      }
+
+      /* Meet the Team */
+      .process-strip-container {
+        margin-bottom: 48px;
+      }
+
+      .process-strip-title {
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--accent-gold);
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .process-strip {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 14px;
+      }
+
+      .process-step-card {
+        background: rgba(28, 37, 65, 0.55);
+        border: 1px solid rgba(56, 189, 248, 0.14);
+        border-radius: var(--radius-md);
+        padding: 16px;
+        transition: all 0.2s ease;
+      }
+
+      .process-step-card:hover {
+        border-color: var(--accent-gold);
+        background: rgba(28, 37, 65, 0.8);
+      }
+
+      .step-num {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--accent-gold);
+        margin-bottom: 4px;
+      }
+
+      .step-name {
+        font-size: 0.92rem;
+        font-weight: 600;
+        color: #ffffff;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 22px;
+      }
+
+      .team-card {
+        padding: 26px 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .avatar-photo-wrapper {
+        width: 76px;
+        height: 76px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid var(--accent-cyan);
+        margin-bottom: 16px;
+        box-shadow: 0 4px 16px rgba(56, 189, 248, 0.25);
+        transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #1C2541;
+      }
+
+      .team-card:hover .avatar-photo-wrapper {
+        transform: scale(1.08);
+        border-color: var(--accent-emerald);
+        box-shadow: 0 4px 20px rgba(16, 185, 129, 0.35);
+      }
+
+      .team-avatar-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .avatar-initials {
+        width: 68px;
+        height: 68px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #1C2541, #2b3964);
+        border: 2px solid var(--accent-cyan);
+        color: #ffffff;
+        font-size: 1.35rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+        box-shadow: 0 4px 16px rgba(56, 189, 248, 0.25);
+        transition: transform 0.25s ease, border-color 0.25s ease;
+      }
+
+      .team-card:hover .avatar-initials {
+        transform: scale(1.08);
+        border-color: var(--accent-emerald);
+        box-shadow: 0 4px 20px rgba(16, 185, 129, 0.35);
+      }
+
+      .team-name {
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 4px;
+      }
+
+      .team-role {
+        font-size: 0.85rem;
+        color: var(--accent-cyan);
+        font-weight: 500;
+      }
+
+      /* Feedback Section */
+      .feedback-wrapper {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 36px 30px;
+      }
+
+      .feedback-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        text-align: left;
+      }
+
+      .form-label {
+        font-size: 0.92rem;
+        font-weight: 600;
+        color: #ffffff;
+      }
+
+      .form-label span.optional {
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: var(--text-muted);
+      }
+
+      .form-input, .form-textarea {
+        background: rgba(11, 19, 43, 0.7);
+        border: 1px solid rgba(56, 189, 248, 0.2);
+        border-radius: var(--radius-sm);
+        padding: 12px 16px;
+        color: #ffffff;
+        font-size: 0.95rem;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .form-input:focus, .form-textarea:focus {
+        border-color: var(--accent-emerald);
+        box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+        outline: none;
+      }
+
+      .form-textarea {
+        resize: vertical;
+        min-height: 80px;
+      }
+
+      /* Star Rating Component */
+      .rating-stars {
+        display: flex;
+        gap: 8px;
+      }
+
+      .star-btn {
+        background: transparent;
+        border: none;
+        font-size: 1.8rem;
+        color: rgba(255, 255, 255, 0.25);
+        cursor: pointer;
+        transition: color 0.15s ease, transform 0.15s ease;
+        padding: 0 2px;
+      }
+
+      .star-btn:hover,
+      .star-btn.active,
+      .star-btn.hovered {
+        color: var(--accent-gold);
+        transform: scale(1.15);
+      }
+
+      .submit-feedback-btn {
+        background: linear-gradient(135deg, var(--accent-emerald), #059669);
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 14px 24px;
+        border-radius: var(--radius-sm);
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        transition: all 0.2s ease;
+        margin-top: 6px;
+      }
+
+      .submit-feedback-btn:hover {
+        background: linear-gradient(135deg, #10B981, #047857);
+        box-shadow: 0 4px 18px rgba(16, 185, 129, 0.4);
+      }
+
+      .feedback-success-msg {
+        display: none;
+        background: rgba(16, 185, 129, 0.15);
+        border: 1px solid var(--accent-emerald);
+        border-radius: var(--radius-sm);
+        padding: 18px;
+        text-align: center;
+        color: #ffffff;
+        margin-top: 16px;
+      }
+
+      .recent-feedback-list {
+        margin-top: 24px;
+        text-align: left;
+        display: none;
+      }
+
+      .recent-item {
+        background: rgba(11, 19, 43, 0.5);
+        border: 1px solid rgba(56, 189, 248, 0.1);
+        padding: 12px 16px;
+        border-radius: var(--radius-sm);
+        margin-bottom: 10px;
+        font-size: 0.88rem;
+      }
+
+      /* Footer */
+      .site-footer {
+        background: #070d1e;
+        border-top: 1px solid rgba(56, 189, 248, 0.15);
+        padding: 60px 0 30px;
+        color: var(--text-secondary);
+        font-size: 0.92rem;
+      }
+
+      .footer-top {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .footer-brand-desc {
+        max-width: 440px;
+        margin-top: 12px;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+
+      .footer-col-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 16px;
+      }
+
+      .footer-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .footer-link {
+        color: var(--text-muted);
+        transition: color 0.2s ease;
+      }
+
+      .footer-link:hover {
+        color: var(--accent-cyan);
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding-top: 24px;
+        text-align: center;
+        font-size: 0.82rem;
+        color: var(--text-muted);
+      }
+
+      /* Floating Chatbot Slide-in Panel */
+      .chat-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(11, 19, 43, 0.65);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+      }
+
+      .chat-overlay.open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .chat-panel {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 440px;
+        max-width: 100vw;
+        height: 100vh;
+        background: var(--bg-navy-light);
+        border-left: 1px solid rgba(56, 189, 248, 0.25);
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.7);
+        z-index: 1001;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .chat-panel.open {
+        transform: translateX(0);
+      }
+
+      .chat-header {
+        padding: 16px 20px;
+        background: var(--bg-navy-dark);
+        border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .chat-header-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .chat-status-indicator {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--accent-emerald);
+        box-shadow: 0 0 8px var(--accent-emerald);
+      }
+
+      .chat-title-text {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #ffffff;
+      }
+
+      .chat-close-btn {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-secondary);
+        font-size: 1.2rem;
+        background: rgba(255, 255, 255, 0.06);
+        transition: all 0.2s ease;
+      }
+
+      .chat-close-btn:hover {
+        background: rgba(239, 68, 68, 0.2);
+        color: #ef4444;
+      }
+
+      .chat-messages {
+        flex: 1;
+        overflow-y: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      /* Message Bubbles */
+      .message-user {
+        align-self: flex-end;
+        background: linear-gradient(135deg, #10B981, #059669);
+        color: #ffffff;
+        padding: 11px 16px;
+        border-radius: 16px 16px 2px 16px;
+        max-width: 82%;
+        font-size: 0.92rem;
+        line-height: 1.45;
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+        word-break: break-word;
+      }
+
+      .message-bot {
+        align-self: flex-start;
+        max-width: 95%;
+        width: 100%;
+      }
+
+      .bot-card {
+        background: var(--bg-navy-surface);
+        border: 1px solid rgba(56, 189, 248, 0.25);
+        border-radius: 16px 16px 16px 2px;
+        padding: 18px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      }
+
+      .bot-card-title {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--accent-cyan);
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+        padding-bottom: 8px;
+      }
+
+      .bot-info-block {
+        margin-bottom: 12px;
+      }
+
+      .bot-info-label {
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--accent-gold);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 3px;
+      }
+
+      .bot-info-text {
+        font-size: 0.88rem;
+        color: #ffffff;
+        line-height: 1.45;
+      }
+
+      .bot-mistakes-text {
+        color: #FCA5A5;
+      }
+
+      .bot-official-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(56, 189, 248, 0.12);
+        color: var(--accent-cyan);
+        border: 1px solid rgba(56, 189, 248, 0.3);
+        padding: 7px 14px;
+        border-radius: var(--radius-sm);
+        font-size: 0.82rem;
+        font-weight: 600;
+        margin-top: 8px;
+        transition: all 0.2s ease;
+      }
+
+      .bot-official-btn:hover {
+        background: var(--accent-cyan);
+        color: var(--bg-navy-dark);
+      }
+
+      .disclaimer-note {
+        font-size: 0.74rem;
+        color: var(--text-muted);
+        margin-top: 10px;
+        padding-top: 8px;
+        border-top: 1px dashed rgba(255, 255, 255, 0.12);
+        font-style: italic;
+      }
+
+      /* Typing Indicator */
+      .typing-indicator {
+        display: none;
+        align-self: flex-start;
+        background: var(--bg-navy-surface);
+        padding: 10px 16px;
+        border-radius: 14px;
+        gap: 5px;
+        align-items: center;
+      }
+
+      .typing-indicator span {
+        width: 6px;
+        height: 6px;
+        background: var(--accent-cyan);
+        border-radius: 50%;
+        animation: typingBounce 1.3s infinite ease-in-out;
+      }
+
+      .typing-indicator span:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .typing-indicator span:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+
+      @keyframes typingBounce {
+        0%, 80%, 100% { transform: translateY(0); opacity: 0.5; }
+        40% { transform: translateY(-6px); opacity: 1; }
+      }
+
+      /* Chat Chips inside panel */
+      .chat-chips-area {
+        padding: 8px 16px;
+        background: rgba(11, 19, 43, 0.4);
+        border-top: 1px solid rgba(56, 189, 248, 0.1);
+        display: flex;
+        gap: 6px;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: thin;
+      }
+
+      .chat-chip {
+        font-size: 0.78rem;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: rgba(28, 37, 65, 0.9);
+        border: 1px solid rgba(56, 189, 248, 0.2);
+        color: var(--text-secondary);
+        cursor: pointer;
+        flex-shrink: 0;
+        transition: all 0.2s ease;
+      }
+
+      .chat-chip:hover {
+        color: var(--accent-cyan);
+        border-color: var(--accent-cyan);
+      }
+
+      /* Chat Footer Input */
+      .chat-footer {
+        padding: 12px 16px;
+        background: var(--bg-navy-dark);
+        border-top: 1px solid rgba(56, 189, 248, 0.15);
+      }
+
+      .chat-input-form {
+        display: flex;
+        gap: 8px;
+      }
+
+      .chat-input {
+        flex: 1;
+        background: rgba(28, 37, 65, 0.8);
+        border: 1px solid rgba(56, 189, 248, 0.25);
+        border-radius: var(--radius-sm);
+        padding: 10px 14px;
+        font-size: 0.9rem;
+        color: #ffffff;
+      }
+
+      .chat-input:focus {
+        outline: none;
+        border-color: var(--accent-emerald);
+      }
+
+      .chat-send-btn {
+        background: var(--accent-emerald);
+        color: #ffffff;
+        border-radius: var(--radius-sm);
+        padding: 0 16px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.2s ease;
+      }
+
+      .chat-send-btn:hover {
+        background: var(--accent-emerald-hover);
+      }
+
+      /* Floating Launcher Button */
+      .floating-launcher-btn {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        background: linear-gradient(135deg, var(--accent-emerald), #059669);
+        color: #ffffff;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.45);
+        z-index: 990;
+        cursor: pointer;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .floating-launcher-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 30px rgba(16, 185, 129, 0.6);
+      }
+
+      /* Fade in animation on scroll */
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(22px);
+        transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: opacity, transform;
+      }
+
+      .fade-in-section.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Responsive Media Queries */
+      @media (max-width: 900px) {
+        .hamburger {
+          display: flex;
+        }
+
+        .nav-menu {
+          position: fixed;
+          top: 72px;
+          left: 0;
+          right: 0;
+          background: rgba(11, 19, 43, 0.98);
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+          flex-direction: column;
+          padding: 30px 24px;
+          gap: 20px;
+          border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+          transform: translateY(-120%);
+          transition: transform 0.3s ease;
+          pointer-events: none;
+        }
+
+        .nav-menu.open {
+          transform: translateY(0);
+          pointer-events: auto;
+        }
+
+        .footer-top {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+
+        .chat-panel {
+          width: 100vw;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .search-form {
+          flex-direction: column;
+          gap: 8px;
+          padding: 8px;
+        }
+
+        .search-btn {
+          padding: 12px;
+          justify-content: center;
+        }
+
+        .quick-chips-container {
+          gap: 6px;
+        }
+
+        .quick-chip {
+          font-size: 0.78rem;
+          padding: 6px 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Parallax Scrolling Abstract Geometric Pattern -->
+    <div class="parallax-geometric-container" id="parallax-geometric-container" aria-hidden="true">
+      <!-- Deep Layer: Isometric Grid & Hexagonal Wireframe Matrix -->
+      <div class="parallax-layer parallax-layer-deep" id="parallax-layer-1">
+        <svg width="100%" height="100%" viewBox="0 0 1440 1200" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
+          <defs>
+            <pattern id="isometric-grid-pat" width="80" height="80" patternUnits="userSpaceOnUse">
+              <path d="M40 0L80 20L80 60L40 80L0 60L0 20Z" stroke="#38BDF8" stroke-width="0.75" stroke-opacity="0.35" fill="none"/>
+              <path d="M40 0L40 80M0 20L80 60M80 20L0 60" stroke="#38BDF8" stroke-width="0.5" stroke-opacity="0.2" fill="none"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#isometric-grid-pat)"/>
+        </svg>
+      </div>
+
+      <!-- Mid Layer: Floating Geometric Polygons & Intersecting Angles -->
+      <div class="parallax-layer parallax-layer-mid" id="parallax-layer-2">
+        <svg width="100%" height="100%" viewBox="0 0 1440 1200" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
+          <!-- Geometric Group 1 (Top Left) -->
+          <g transform="translate(80, 120)">
+            <polygon points="120,20 220,70 190,190 70,160 30,70" stroke="#10B981" stroke-width="1.5" stroke-opacity="0.45" stroke-dasharray="6,4" fill="none"/>
+            <polygon points="120,40 190,80 170,160 85,140 55,80" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.3" fill="none"/>
+            <circle cx="120" cy="20" r="4" fill="#10B981" fill-opacity="0.7"/>
+            <circle cx="220" cy="70" r="4" fill="#38BDF8" fill-opacity="0.7"/>
+            <circle cx="190" cy="190" r="4" fill="#10B981" fill-opacity="0.7"/>
+          </g>
+
+          <!-- Geometric Group 2 (Top Right) -->
+          <g transform="translate(1050, 160)">
+            <polygon points="150,0 280,75 280,225 150,300 20,225 20,75" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.4" fill="none"/>
+            <polygon points="150,40 240,95 240,205 150,260 60,205 60,95" stroke="#F59E0B" stroke-width="1" stroke-opacity="0.35" stroke-dasharray="4,6" fill="none"/>
+            <line x1="20" y1="75" x2="280" y2="225" stroke="#38BDF8" stroke-width="0.8" stroke-opacity="0.25"/>
+            <circle cx="150" cy="150" r="6" stroke="#10B981" stroke-width="1.5" fill="none"/>
+          </g>
+
+          <!-- Geometric Group 3 (Center Bottom) -->
+          <g transform="translate(480, 680)">
+            <polygon points="160,0 320,160 160,320 0,160" stroke="#10B981" stroke-width="1.2" stroke-opacity="0.4" stroke-dasharray="8,6" fill="none"/>
+            <circle cx="160" cy="160" r="70" stroke="#38BDF8" stroke-width="0.9" stroke-opacity="0.3" fill="none"/>
+            <line x1="160" y1="20" x2="160" y2="300" stroke="#F59E0B" stroke-width="0.8" stroke-opacity="0.3"/>
+            <line x1="20" y1="160" x2="300" y2="160" stroke="#F59E0B" stroke-width="0.8" stroke-opacity="0.3"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Front Layer: Precision Crosshairs, Constellation Nodes & Micro Geometrics -->
+      <div class="parallax-layer parallax-layer-front" id="parallax-layer-3">
+        <svg width="100%" height="100%" viewBox="0 0 1440 1200" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
+          <!-- Crosshairs -->
+          <g stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.5">
+            <path d="M220 400h20M230 390v20"/>
+            <path d="M850 250h20M860 240v20"/>
+            <path d="M1280 620h20M1290 610v20"/>
+            <path d="M180 900h20M190 890v20"/>
+            <path d="M980 950h20M990 940v20"/>
+          </g>
+
+          <!-- Floating Diamond Micro-clusters -->
+          <g fill="#10B981" fill-opacity="0.4">
+            <polygon points="340,180 346,188 340,196 334,188"/>
+            <polygon points="780,480 786,488 780,496 774,488"/>
+            <polygon points="1180,380 1186,388 1180,396 1174,388"/>
+            <polygon points="620,880 626,888 620,896 614,888"/>
+          </g>
+
+          <!-- Diagonal Guideline Axis -->
+          <line x1="0" y1="350" x2="1440" y2="850" stroke="#38BDF8" stroke-width="0.6" stroke-dasharray="10,14" stroke-opacity="0.25"/>
+          <line x1="0" y1="750" x2="1440" y2="150" stroke="#10B981" stroke-width="0.6" stroke-dasharray="12,18" stroke-opacity="0.2"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Top Sticky Navigation -->
+    <header class="navbar" id="top-nav">
+      <div class="container nav-container">
+        <!-- Brand Lockup -->
+        <a href="#home" class="brand-lockup" aria-label="GUIA AI Homepage">
+          <span class="cloud-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+            </svg>
+            AI Bureaucracy Navigator
+          </span>
+          <span class="brand-title">GUIA AI</span>
+          <span class="nav-tagline">simplifiying bureaucracy,step by step.</span>
+        </a>
+
+        <!-- Desktop Navigation Items -->
+        <nav aria-label="Primary Navigation">
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#services" class="nav-link">Document Services</a></li>
+            <li><a href="#chatbot" class="nav-link" id="nav-chatbot-link">Chatbot</a></li>
+            <li><a href="#roadmap" class="nav-link">Future Roadmap</a></li>
+            <li><a href="#team" class="nav-link">Our Team</a></li>
+            <li><a href="#feedback" class="nav-link">Feedback</a></li>
+            <li>
+              <button class="nav-btn-chat" id="header-chat-btn" aria-label="Open GUIA AI Assistant Chatbot">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+                Ask Assistant
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Hamburger -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Home Section -->
+      <section id="home" class="fade-in-section">
+        <div class="container hero-content">
+          <div class="hero-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+            Clear, Verified & Direct Guidance
+          </div>
+
+          <h1 class="hero-headline">Navigate Indian Government Bureaucracy with Ease</h1>
+          <p class="hero-subtitle">
+            Get Simple Step-by-Step English Guidance for Official Government Paperwork.
+          </p>
+
+          <!-- Large Search Input Box -->
+          <div class="search-box-wrapper">
+            <form class="search-form" id="hero-search-form" role="search" aria-label="Search government document instructions">
+              <div class="search-icon-prefix" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <circle cx="11" cy="11" r="8"/>
+                  <path d="m21 21-4.3-4.3"/>
+                </svg>
+              </div>
+              <input
+                type="text"
+                class="search-input"
+                id="hero-search-input"
+                placeholder="Type a document name (e.g., Aadhaar Card, PAN Card, Passport)..."
+                autocomplete="off"
+                aria-label="Document name to query"
+              />
+              <button type="submit" class="search-btn" aria-label="Send query to chatbot">
+                <span>Send</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="m22 2-7 20-4-9-9-4Z"/>
+                  <path d="M22 2 11 13"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+
+          <!-- Quick Chips -->
+          <div class="quick-chips-container" aria-label="Frequently requested documents">
+            <span class="chips-label">Quick Search:</span>
+            <button type="button" class="quick-chip" data-query="Aadhaar Card">Aadhaar Card</button>
+            <button type="button" class="quick-chip" data-query="PAN Card">PAN Card</button>
+            <button type="button" class="quick-chip" data-query="Passport">Passport</button>
+            <button type="button" class="quick-chip" data-query="Proof of Identity">Proof of Identity</button>
+            <button type="button" class="quick-chip" data-query="Self-Attested Copy">Self-Attested Copy</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Document Services Section -->
+      <section id="services" class="fade-in-section">
+        <div class="container">
+          <div class="section-badge">Official Document Guides</div>
+          <h2 class="section-title">Essential <span class="highlight">Document Services</span></h2>
+          <p class="section-subtitle">
+            Authoritative breakdown of application steps, mandatory verification documents, and official government portal links.
+          </p>
+
+          <div class="services-grid">
+            <!-- Aadhaar Card -->
+            <article class="glass-card service-card">
+              <div>
+                <div class="service-icon-box" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect width="18" height="18" x="3" y="3" rx="2"/>
+                    <path d="M7 7h10M7 12h10M7 17h6"/>
+                  </svg>
+                </div>
+                <h3 class="service-title">Aadhaar Card</h3>
+                <p class="service-desc">
+                  India's 12-digit biometric identity. Learn how to book appointments, manage new enrolments for free, and update your registered address.
+                </p>
+              </div>
+              <div class="service-actions">
+                <button type="button" class="btn-ask-chat" data-query="Aadhaar Card">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                  </svg>
+                  Ask the Chatbot
+                </button>
+                <a href="https://uidai.gov.in" target="_blank" rel="noopener noreferrer" class="btn-official-site">
+                  Official Website
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- PAN Card -->
+            <article class="glass-card service-card">
+              <div>
+                <div class="service-icon-box" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect width="20" height="14" x="2" y="5" rx="2"/>
+                    <line x1="2" x2="22" y1="10" y2="10"/>
+                  </svg>
+                </div>
+                <h3 class="service-title">PAN Card</h3>
+                <p class="service-desc">
+                  Permanent Account Number for banking and taxes. Instructions on Form 49A, paperless e-KYC, and avoiding common name mismatch errors.
+                </p>
+              </div>
+              <div class="service-actions">
+                <button type="button" class="btn-ask-chat" data-query="PAN Card">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                  </svg>
+                  Ask the Chatbot
+                </button>
+                <a href="https://www.incometax.gov.in" target="_blank" rel="noopener noreferrer" class="btn-official-site">
+                  Official Website
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Passport -->
+            <article class="glass-card service-card">
+              <div>
+                <div class="service-icon-box" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <h3 class="service-title">Passport</h3>
+                <p class="service-desc">
+                  International travel credentials. Navigate Passport Seva Kendra (PSK) appointments, document checklist, police verification, and dispatch.
+                </p>
+              </div>
+              <div class="service-actions">
+                <button type="button" class="btn-ask-chat" data-query="Passport">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                  </svg>
+                  Ask the Chatbot
+                </button>
+                <a href="https://www.passportindia.gov.in" target="_blank" rel="noopener noreferrer" class="btn-official-site">
+                  Official Website
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Legal Terms -->
+            <article class="glass-card service-card">
+              <div>
+                <div class="service-icon-box" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+                    <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+                    <path d="M7 21h10"/>
+                    <path d="M12 3v18"/>
+                    <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>
+                  </svg>
+                </div>
+                <h3 class="service-title">Legal Terms</h3>
+                <p class="service-desc">
+                  Understand core bureaucratic requirements: Proof of Identity (POI), Proof of Address (POA), and how to properly produce a Self-Attested Copy.
+                </p>
+              </div>
+              <div class="service-actions">
+                <button type="button" class="btn-ask-chat" data-query="Proof of Identity">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                  </svg>
+                  Ask the Chatbot
+                </button>
+                <a href="https://www.india.gov.in" target="_blank" rel="noopener noreferrer" class="btn-official-site">
+                  Official Website
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/>
+                  </svg>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chatbot Section Anchor -->
+      <section id="chatbot" class="fade-in-section" style="padding: 40px 0;">
+        <div class="container text-center">
+          <div class="glass-card" style="padding: 40px 24px; text-align: center; max-width: 800px; margin: 0 auto; border: 1px solid rgba(16, 185, 129, 0.3);">
+            <div class="section-badge">Direct Interactive Guidance</div>
+            <h2 style="font-size: 1.8rem; margin-bottom: 12px; font-weight: 700;">Meet the GUIA AI Assistant</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 24px;">
+              Get instant answers on required documents, application steps, fees, processing timelines, and avoid costly clerical mistakes.
+            </p>
+            <button type="button" class="nav-btn-chat" id="inline-open-chat-btn" style="padding: 12px 28px; font-size: 1rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+              Open Interactive Assistant
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Future Roadmap Section -->
+      <section id="roadmap" class="fade-in-section">
+        <div class="container">
+          <div class="section-badge">Vision & Development</div>
+          <h2 class="section-title">Future <span class="highlight">Roadmap</span></h2>
+          <p class="section-subtitle">
+            Expanding accessibility through conversational voice, local language parity, and real-time status synchronisation.
+          </p>
+
+          <div class="roadmap-grid">
+            <div class="glass-card roadmap-card">
+              <div class="roadmap-number">Phase 01</div>
+              <h3 class="roadmap-title">Voice Assistant & Speech Input</h3>
+              <p class="roadmap-desc">Hands-free voice recognition allowing citizens to speak naturally in their accent.</p>
+            </div>
+
+            <div class="glass-card roadmap-card">
+              <div class="roadmap-number">Phase 02</div>
+              <h3 class="roadmap-title">Regional Indian Languages</h3>
+              <p class="roadmap-desc">Support for Hindi, Bengali, Tamil, Telugu, Marathi, and other constitutional languages.</p>
+            </div>
+
+            <div class="glass-card roadmap-card">
+              <div class="roadmap-number">Phase 03</div>
+              <h3 class="roadmap-title">Downloadable Document Checklists</h3>
+              <p class="roadmap-desc">One-click printable PDF checklists custom-tailored to each individual case.</p>
+            </div>
+
+            <div class="glass-card roadmap-card">
+              <div class="roadmap-number">Phase 04</div>
+              <h3 class="roadmap-title">Mobile App & Live Application Tracking</h3>
+              <p class="roadmap-desc">Dedicated mobile experience with push notification alerts on portal status updates.</p>
+            </div>
+
+            <div class="glass-card roadmap-card">
+              <div class="roadmap-number">Phase 05</div>
+              <h3 class="roadmap-title">More Government Services</h3>
+              <p class="roadmap-desc">Expanding coverage to Voter ID, Driving Licence, Ration Card, and State Certificates.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Team Section -->
+      <section id="team" class="fade-in-section">
+        <div class="container">
+          <div class="section-badge">The Builders</div>
+          <h2 class="section-title">Our <span class="highlight">Team</span></h2>
+          <p class="section-subtitle" style="margin-bottom: 24px; color: #e1cbcb; font-family: Georgia;">Distinct Roles, Unified Mission.</p>
+
+          <!-- From Concept to Creation / Idea to Implementation Strip -->
+          <div class="process-strip-container">
+            <h3 class="process-strip-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                <polyline points="2 17 12 22 22 17"/>
+                <polyline points="2 12 12 17 22 12"/>
+              </svg>
+              Idea to Implementation
+            </h3>
+            <div class="process-strip">
+              <div class="process-step-card">
+                <div class="step-num">01</div>
+                <div class="step-name">Identify Problem</div>
+              </div>
+              <div class="process-step-card">
+                <div class="step-num">02</div>
+                <div class="step-name">Collect Data</div>
+              </div>
+              <div class="process-step-card">
+                <div class="step-num">03</div>
+                <div class="step-name">Develop System</div>
+              </div>
+              <div class="process-step-card">
+                <div class="step-num">04</div>
+                <div class="step-name">Test & Improve</div>
+              </div>
+              <div class="process-step-card">
+                <div class="step-num">05</div>
+                <div class="step-name">Document & Present</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Five Profile Cards with Photos -->
+          <div class="team-grid">
+            <div class="glass-card team-card">
+              <div class="avatar-photo-wrapper">
+                <img
+                  src="/src/assets/images/team_ananya_gupta_1791213021452.jpg"
+                  alt="Ananya Gupta - Coder & Team Leader"
+                  class="team-avatar-img"
+                  referrerPolicy="no-referrer"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="avatar-initials fallback" style="display:none;">AG</div>
+              </div>
+              <h3 class="team-name">Ananya Gupta</h3>
+              <p class="team-role">Coder & Team Leader</p>
+            </div>
+
+            <div class="glass-card team-card">
+              <div class="avatar-photo-wrapper">
+                <img
+                  src="/src/assets/images/team_aniket_anand_1791213037899.jpg"
+                  alt="Aniket Anand - Data Collector"
+                  class="team-avatar-img"
+                  referrerPolicy="no-referrer"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="avatar-initials fallback" style="display:none;">AA</div>
+              </div>
+              <h3 class="team-name">Aniket Anand</h3>
+              <p class="team-role">Data Collector</p>
+            </div>
+
+            <div class="glass-card team-card">
+              <div class="avatar-photo-wrapper">
+                <img
+                  src="/src/assets/images/team_bhumika_rajput_1791213050000.jpg"
+                  alt="Bhumika Rajput - Project Documenter"
+                  class="team-avatar-img"
+                  referrerPolicy="no-referrer"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="avatar-initials fallback" style="display:none;">BR</div>
+              </div>
+              <h3 class="team-name">Bhumika Rajput</h3>
+              <p class="team-role">Project Documenter</p>
+            </div>
+
+            <div class="glass-card team-card">
+              <div class="avatar-photo-wrapper">
+                <img
+                  src="/src/assets/images/team_tanish_rana_1791213063199.jpg"
+                  alt="Tanish Rana - Tester"
+                  class="team-avatar-img"
+                  referrerPolicy="no-referrer"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="avatar-initials fallback" style="display:none;">TR</div>
+              </div>
+              <h3 class="team-name">Tanish Rana</h3>
+              <p class="team-role">Tester</p>
+            </div>
+
+            <div class="glass-card team-card">
+              <div class="avatar-photo-wrapper">
+                <img
+                  src="/src/assets/images/team_naman_sharma_1791213087715.jpg"
+                  alt="Naman Sharma - Video Editor"
+                  class="team-avatar-img"
+                  referrerPolicy="no-referrer"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="avatar-initials fallback" style="display:none;">NS</div>
+              </div>
+              <h3 class="team-name">Naman Sharma</h3>
+              <p class="team-role">Video Editor</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feedback Section -->
+      <section id="feedback" class="fade-in-section">
+        <div class="container text-center">
+          <div class="section-badge">User Insights</div>
+          <h2 class="section-title">Stakeholder <span class="highlight">Feedback</span></h2>
+          <p class="section-subtitle" style="margin: 0 auto 36px auto;">
+            Help us streamline the bureaucratic navigator. Your insights drive our next system updates.
+          </p>
+
+          <div class="glass-card feedback-wrapper">
+            <form class="feedback-form" id="feedback-form" novalidate>
+              <div class="form-group">
+                <label for="feedback-name" class="form-label">
+                  Your Name <span class="optional">(optional)</span>
+                </label>
+                <input
+                  type="text"
+                  id="feedback-name"
+                  class="form-input"
+                  placeholder="e.g., Rajesh Sharma"
+                />
+              </div>
+
+              <!-- 1 to 5 Star Rating -->
+              <div class="form-group">
+                <label class="form-label">Overall Rating *</label>
+                <div class="rating-stars" id="rating-stars" role="radiogroup" aria-label="1 to 5 Star Rating">
+                  <button type="button" class="star-btn" data-rating="1" aria-label="1 star">&#9733;</button>
+                  <button type="button" class="star-btn" data-rating="2" aria-label="2 stars">&#9733;</button>
+                  <button type="button" class="star-btn" data-rating="3" aria-label="3 stars">&#9733;</button>
+                  <button type="button" class="star-btn" data-rating="4" aria-label="4 stars">&#9733;</button>
+                  <button type="button" class="star-btn" data-rating="5" aria-label="5 stars">&#9733;</button>
+                </div>
+                <input type="hidden" id="feedback-rating" value="0" />
+                <span id="rating-error" style="color: #f87171; font-size: 0.8rem; display: none;">Please select a star rating.</span>
+              </div>
+
+              <!-- What worked well -->
+              <div class="form-group">
+                <label for="feedback-worked-well" class="form-label">What worked well? *</label>
+                <textarea
+                  id="feedback-worked-well"
+                  class="form-textarea"
+                  placeholder="Which guidance or feature was most helpful?"
+                  required
+                ></textarea>
+                <span id="worked-well-error" style="color: #f87171; font-size: 0.8rem; display: none;">Please fill in what worked well.</span>
+              </div>
+
+              <!-- What should we improve -->
+              <div class="form-group">
+                <label for="feedback-improve" class="form-label">What should we improve?</label>
+                <textarea
+                  id="feedback-improve"
+                  class="form-textarea"
+                  placeholder="Suggestions, missing document forms, or interface improvements..."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="submit-feedback-btn">
+                <span>Submit Feedback</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </form>
+
+            <div class="feedback-success-msg" id="feedback-success-msg" role="status">
+              <h4 style="font-weight: 700; margin-bottom: 6px; color: var(--accent-emerald);">Thank you for your feedback!</h4>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 12px;">
+                Your response has been stored in session memory and an email notification has been prepared for <strong style="color:var(--accent-cyan);">group2aiproject@gmail.com</strong>.
+              </p>
+              <div id="email-action-area" style="margin-top: 10px;"></div>
+              <button type="button" id="btn-submit-another" style="margin-top: 14px; font-size: 0.82rem; color: var(--text-muted); text-decoration: underline; background: none; border: none; cursor: pointer;">
+                Submit Another Response
+              </button>
+            </div>
+
+            <div class="recent-feedback-list" id="recent-feedback-container">
+              <h5 style="color: var(--accent-cyan); margin-bottom: 8px; font-size: 0.85rem; text-transform: uppercase;">Recorded in Memory (Session)</h5>
+              <div id="feedback-items"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div>
+            <div class="cloud-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+              </svg>
+              AI Bureaucracy Navigator
+            </div>
+            <div class="brand-title" style="margin-top: 4px;">GUIA AI</div>
+            <p class="footer-brand-desc">
+              GUIA AI - Built through innovation and collaboration. Simplifying Indian Bureaucracy through Artificial Intelligence.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Navigation</h4>
+            <ul class="footer-links">
+              <li><a href="#home" class="footer-link">Home</a></li>
+              <li><a href="#services" class="footer-link">Document Services</a></li>
+              <li><a href="#chatbot" class="footer-link" id="footer-chatbot-link">Chatbot Assistant</a></li>
+              <li><a href="#roadmap" class="footer-link">Future Roadmap</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Organization</h4>
+            <ul class="footer-links">
+              <li><a href="#team" class="footer-link">Our Team</a></li>
+              <li><a href="#feedback" class="footer-link">Feedback</a></li>
+              <li><a href="https://www.india.gov.in" target="_blank" rel="noopener noreferrer" class="footer-link">National Portal of India</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            Simplifying Indian Bureaucracy through Artificial Intelligence. &copy; 2026 GUIA AI. Fees and rules are subject to change by respective government ministries.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Chatbot Launcher Button -->
+    <button class="floating-launcher-btn" id="floating-chat-trigger" aria-label="Open GUIA AI Chatbot Assistant">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </svg>
+    </button>
+
+    <!-- Floating Slide-in Chatbot Panel -->
+    <div class="chat-overlay" id="chat-overlay"></div>
+    <aside class="chat-panel" id="chat-panel" aria-label="GUIA AI Assistant" role="dialog" aria-modal="true">
+      <div class="chat-header">
+        <div class="chat-header-title">
+          <div class="chat-status-indicator" aria-hidden="true"></div>
+          <div>
+            <div class="chat-title-text">GUIA AI Assistant</div>
+            <div style="font-size: 0.72rem; color: var(--accent-emerald);">Online · Bureaucracy Navigator</div>
+          </div>
+        </div>
+        <button type="button" class="chat-close-btn" id="chat-close-btn" aria-label="Close Assistant">
+          &times;
+        </button>
+      </div>
+
+      <!-- Messages Scroll Area -->
+      <div class="chat-messages" id="chat-messages">
+        <!-- Initial welcome message from GUIA AI -->
+        <div class="message-bot">
+          <div class="bot-card">
+            <div class="bot-card-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 16v-4M12 8h.01"/>
+              </svg>
+              Welcome to GUIA AI
+            </div>
+            <p class="bot-info-text">
+              Hello! I am your AI Bureaucracy Navigator. Ask me about Indian government paperwork, required documents, official fees, step-by-step procedures, or common mistakes to avoid.
+            </p>
+            <p class="disclaimer-note">Fees and rules can change. Always confirm on the official portal before applying.</p>
+          </div>
+        </div>
+
+        <!-- Typing Indicator -->
+        <div class="typing-indicator" id="typing-indicator" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <!-- Quick Chips Bar inside Chatbot -->
+      <div class="chat-chips-area" aria-label="Quick questions">
+        <button type="button" class="chat-chip" data-query="Aadhaar Card">Aadhaar Card</button>
+        <button type="button" class="chat-chip" data-query="PAN Card">PAN Card</button>
+        <button type="button" class="chat-chip" data-query="Passport">Passport</button>
+        <button type="button" class="chat-chip" data-query="Proof of Identity">Proof of Identity</button>
+        <button type="button" class="chat-chip" data-query="Self-Attested Copy">Self-Attested Copy</button>
+      </div>
+
+      <!-- Input Form -->
+      <div class="chat-footer">
+        <form class="chat-input-form" id="chat-input-form">
+          <input
+            type="text"
+            id="chat-input"
+            class="chat-input"
+            placeholder="Ask about Aadhaar, PAN, Passport..."
+            autocomplete="off"
+            aria-label="Ask a follow-up question"
+          />
+          <button type="submit" class="chat-send-btn" aria-label="Send message">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m22 2-7 20-4-9-9-4Z"/>
+              <path d="M22 2 11 13"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </aside>
+
+    <!-- Vanilla JavaScript Implementation -->
+    <script>
+      /**
+       * GUIA AI - Vanilla JavaScript Application Logic
+       * Single-file implementation with all Chatbot Data, Search, Navigation, and In-Memory Feedback.
+       */
+
+      // 1. CHATBOT DATA STORE (Kept in one clean JavaScript object as specified)
+      const CHATBOT_KNOWLEDGE_BASE = {
+        aadhaar: {
+          title: "Aadhaar Card Guidance",
+          requiredDocs: "Proof of Identity and Proof of Address (originals).",
+          process: "Book appointment on UIDAI site, visit enrolment centre, biometric capture, collect acknowledgement slip, track status online.",
+          feesAndTime: "New enrolment is free, updates have a nominal fee. Verify processing time on portal.",
+          mistakes: "Name spelling mismatch, outdated address proof, mobile number not registered.",
+          portalUrl: "https://uidai.gov.in",
+          portalName: "UIDAI Official Portal"
+        },
+        pan: {
+          title: "PAN Card Guidance",
+          requiredDocs: "Proof of Identity, Proof of Address, Proof of Date of Birth, passport photo.",
+          process: "Apply online on the NSDL (Protean) or UTIITSL portal using Form 49A, fill details, upload documents, pay fee, e-sign or send physical form, track with acknowledgement number.",
+          feesAndTime: "Small fee applies, verify on portal.",
+          mistakes: "Name or DOB mismatch, blurry scans, wrong category.",
+          portalUrl: "https://www.incometax.gov.in",
+          portalName: "Income Tax & PAN Portal"
+        },
+        passport: {
+          title: "Indian Passport Guidance",
+          requiredDocs: "Proof of Address, Proof of Date of Birth, ID proof.",
+          process: "Register on Passport Seva, fill application, pay fee, book appointment, document verification and biometrics, police verification, dispatch.",
+          feesAndTime: "Fee depends on booklet type and Normal or Tatkal, verify on portal.",
+          mistakes: "Mismatched details, missed appointment, incomplete address proof.",
+          portalUrl: "https://www.passportindia.gov.in",
+          portalName: "Passport Seva Official Portal"
+        },
+        proofOfIdentity: {
+          title: "Proof of Identity (POI)",
+          requiredDocs: "A document that proves who you are, like Aadhaar, Voter ID, Passport or Driving Licence.",
+          process: "Provide an unexpired, government-issued document displaying your legal photograph and full name.",
+          feesAndTime: "No separate verification fee; depends on standard issuing authority.",
+          mistakes: "Using expired documents, blurred photo copies, or nickname discrepancies.",
+          portalUrl: "https://www.india.gov.in",
+          portalName: "National Portal of India"
+        },
+        proofOfAddress: {
+          title: "Proof of Address (POA)",
+          requiredDocs: "A document showing where you live, like a utility bill, bank statement or rent agreement.",
+          process: "Ensure the document is recent (normally within 3 months) and matches the applicant's name and residential location.",
+          feesAndTime: "No separate verification fee.",
+          mistakes: "Submitting outdated utility bills (>3 months old) or address spelling variations.",
+          portalUrl: "https://www.india.gov.in",
+          portalName: "National Portal of India"
+        },
+        selfAttested: {
+          title: "Self-Attested Copy",
+          requiredDocs: "A photocopy on which you write 'True copy' and sign yourself.",
+          process: "Take a clear photocopy of your original document. Write 'True copy' or 'Self-attested' across the white margin, add your signature, and write the current date.",
+          feesAndTime: "Completely free (no notary or gazetted officer signature needed).",
+          mistakes: "Signing across critical document numbers or barcode, using illegible ink, or omitting the date.",
+          portalUrl: "https://www.india.gov.in",
+          portalName: "National Portal of India"
+        }
+      };
+
+      // In-Memory Storage for Feedback (no localStorage per prompt requirements)
+      const inMemoryFeedbackStore = [];
+
+      // DOM Elements
+      const chatPanel = document.getElementById('chat-panel');
+      const chatOverlay = document.getElementById('chat-overlay');
+      const chatCloseBtn = document.getElementById('chat-close-btn');
+      const chatMessages = document.getElementById('chat-messages');
+      const chatInputForm = document.getElementById('chat-input-form');
+      const chatInput = document.getElementById('chat-input');
+      const typingIndicator = document.getElementById('typing-indicator');
+      const floatingChatTrigger = document.getElementById('floating-chat-trigger');
+      const headerChatBtn = document.getElementById('header-chat-btn');
+      const inlineOpenChatBtn = document.getElementById('inline-open-chat-btn');
+      const navChatbotLink = document.getElementById('nav-chatbot-link');
+      const footerChatbotLink = document.getElementById('footer-chatbot-link');
+      const heroSearchForm = document.getElementById('hero-search-form');
+      const heroSearchInput = document.getElementById('hero-search-input');
+      const hamburgerBtn = document.getElementById('hamburger-btn');
+      const navMenu = document.getElementById('nav-menu');
+
+      // 2. Chat Panel Open / Close Control
+      function openChat(initialQuery = '') {
+        chatOverlay.classList.add('open');
+        chatPanel.classList.add('open');
+        chatInput.focus();
+
+        if (initialQuery.trim()) {
+          handleChatQuery(initialQuery.trim());
+        }
+      }
+
+      function closeChat() {
+        chatOverlay.classList.remove('open');
+        chatPanel.classList.remove('open');
+      }
+
+      // Event Listeners for Chat Opening
+      floatingChatTrigger.addEventListener('click', () => openChat());
+      headerChatBtn.addEventListener('click', () => openChat());
+      if (inlineOpenChatBtn) {
+        inlineOpenChatBtn.addEventListener('click', () => openChat());
+      }
+      if (navChatbotLink) {
+        navChatbotLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          openChat();
+        });
+      }
+      if (footerChatbotLink) {
+        footerChatbotLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          openChat();
+        });
+      }
+      chatCloseBtn.addEventListener('click', closeChat);
+      chatOverlay.addEventListener('click', closeChat);
+
+      // Escape key to close chat
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && chatPanel.classList.contains('open')) {
+          closeChat();
+        }
+      });
+
+      // 3. Forgiving, Case-Insensitive Keyword Matching
+      function findMatchingTopic(query) {
+        const q = query.toLowerCase().trim();
+
+        // Aadhaar variations
+        if (q.includes('aadhaar') || q.includes('aadhar') || q.includes('adhar') || q.includes('uidai') || q.includes('adhaar')) {
+          return CHATBOT_KNOWLEDGE_BASE.aadhaar;
+        }
+
+        // PAN variations
+        if (q === 'pan' || q.includes('pan card') || q.includes('pancard') || q.includes('form 49a') || q.includes('nsdl') || q.includes('utiitsl')) {
+          return CHATBOT_KNOWLEDGE_BASE.pan;
+        }
+
+        // Passport variations
+        if (q.includes('passport') || q.includes('tatkal') || q.includes('passport seva') || q.includes('psk')) {
+          return CHATBOT_KNOWLEDGE_BASE.passport;
+        }
+
+        // Self Attested variations
+        if (q.includes('self attested') || q.includes('self-attested') || q.includes('self attestation') || q.includes('true copy') || q.includes('attestation')) {
+          return CHATBOT_KNOWLEDGE_BASE.selfAttested;
+        }
+
+        // Proof of Identity variations
+        if (q === 'poi' || q.includes('proof of identity') || q.includes('identity proof') || q.includes('id proof')) {
+          return CHATBOT_KNOWLEDGE_BASE.proofOfIdentity;
+        }
+
+        // Proof of Address variations
+        if (q === 'poa' || q.includes('proof of address') || q.includes('address proof') || q.includes('residence proof')) {
+          return CHATBOT_KNOWLEDGE_BASE.proofOfAddress;
+        }
+
+        return null;
+      }
+
+      // Append User Bubble
+      function appendUserMessage(text) {
+        const userMsg = document.createElement('div');
+        userMsg.className = 'message-user';
+        userMsg.textContent = text;
+        chatMessages.insertBefore(userMsg, typingIndicator);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+
+      // Append Bot Response Card
+      function appendBotResponse(topicData) {
+        const botMsg = document.createElement('div');
+        botMsg.className = 'message-bot';
+
+        if (topicData) {
+          botMsg.innerHTML = `
+            <div class="bot-card">
+              <div class="bot-card-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+                ${topicData.title}
+              </div>
+
+              <div class="bot-info-block">
+                <div class="bot-info-label">Required Documents</div>
+                <div class="bot-info-text">${topicData.requiredDocs}</div>
+              </div>
+
+              <div class="bot-info-block">
+                <div class="bot-info-label">Step-by-Step Process</div>
+                <div class="bot-info-text">${topicData.process}</div>
+              </div>
+
+              <div class="bot-info-block">
+                <div class="bot-info-label">Official Fees and Processing Time</div>
+                <div class="bot-info-text">${topicData.feesAndTime}</div>
+              </div>
+
+              <div class="bot-info-block">
+                <div class="bot-info-label" style="color: #F87171;">Common Mistakes to Avoid</div>
+                <div class="bot-info-text bot-mistakes-text">${topicData.mistakes}</div>
+              </div>
+
+              <a href="${topicData.portalUrl}" target="_blank" rel="noopener noreferrer" class="bot-official-btn">
+                <span>Visit ${topicData.portalName}</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/>
+                </svg>
+              </a>
+
+              <p class="disclaimer-note">Fees and rules can change. Always confirm on the official portal before applying.</p>
+            </div>
+          `;
+        } else {
+          // Fallback reply
+          botMsg.innerHTML = `
+            <div class="bot-card">
+              <div class="bot-card-title" style="color: var(--accent-gold);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="12" y1="8" x2="12" y2="12"/>
+                  <line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+                Information Not Found
+              </div>
+              <p class="bot-info-text">
+                I couldn't find that yet. Try Aadhaar Card, PAN Card, Passport, Proof of Identity or Self-Attested Copy.
+              </p>
+              <p class="disclaimer-note">Fees and rules can change. Always confirm on the official portal before applying.</p>
+            </div>
+          `;
+        }
+
+        chatMessages.insertBefore(botMsg, typingIndicator);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+
+      // Handle Full Chat Interaction with Typing Simulation
+      function handleChatQuery(query) {
+        if (!query.trim()) return;
+
+        appendUserMessage(query);
+
+        // Show typing indicator
+        typingIndicator.style.display = 'flex';
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+
+        const match = findMatchingTopic(query);
+
+        // Short realistic typing timeout
+        setTimeout(() => {
+          typingIndicator.style.display = 'none';
+          appendBotResponse(match);
+        }, 500);
+      }
+
+      // Chat Input Form Submission
+      chatInputForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const text = chatInput.value.trim();
+        if (text) {
+          handleChatQuery(text);
+          chatInput.value = '';
+        }
+      });
+
+      // Quick Chips (Hero + Chatbot)
+      document.querySelectorAll('.quick-chip, .chat-chip, .btn-ask-chat').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const query = btn.getAttribute('data-query');
+          openChat(query);
+        });
+      });
+
+      // Hero Search Form
+      heroSearchForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const query = heroSearchInput.value.trim();
+        if (query) {
+          openChat(query);
+          heroSearchInput.value = '';
+        }
+      });
+
+      // 4. Mobile Hamburger Navigation
+      hamburgerBtn.addEventListener('click', () => {
+        const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
+        hamburgerBtn.setAttribute('aria-expanded', !isExpanded);
+        navMenu.classList.toggle('open');
+      });
+
+      // Close mobile menu when nav link is clicked
+      document.querySelectorAll('.nav-link').forEach((link) => {
+        link.addEventListener('click', () => {
+          hamburgerBtn.setAttribute('aria-expanded', 'false');
+          navMenu.classList.remove('open');
+        });
+      });
+
+      // 5. Active Nav Highlight on Scroll (Scroll Spy)
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      window.addEventListener('scroll', () => {
+        let currentSectionId = '';
+        const scrollPosition = window.scrollY + 140;
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            currentSectionId = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${currentSectionId}`) {
+            link.classList.add('active');
+          }
+        });
+      });
+
+      // 6. Fade-in on Scroll (IntersectionObserver)
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.12
+        });
+
+        document.querySelectorAll('.fade-in-section').forEach((sec) => {
+          observer.observe(sec);
+        });
+      } else {
+        // Fallback for older browsers
+        document.querySelectorAll('.fade-in-section').forEach((sec) => {
+          sec.classList.add('is-visible');
+        });
+      }
+
+      // 7. Interactive Star Rating & Feedback Form
+      const starButtons = document.querySelectorAll('#rating-stars .star-btn');
+      const ratingInput = document.getElementById('feedback-rating');
+      const ratingError = document.getElementById('rating-error');
+      const workedWellInput = document.getElementById('feedback-worked-well');
+      const workedWellError = document.getElementById('worked-well-error');
+      const feedbackForm = document.getElementById('feedback-form');
+      const feedbackSuccessMsg = document.getElementById('feedback-success-msg');
+      const recentFeedbackContainer = document.getElementById('recent-feedback-container');
+      const feedbackItems = document.getElementById('feedback-items');
+
+      let currentRating = 0;
+
+      starButtons.forEach((star) => {
+        // Mouse enter for preview
+        star.addEventListener('mouseenter', () => {
+          const ratingVal = parseInt(star.getAttribute('data-rating'), 10);
+          highlightStars(ratingVal, 'hovered');
+        });
+
+        // Mouse leave
+        star.addEventListener('mouseleave', () => {
+          highlightStars(currentRating, 'active');
+        });
+
+        // Click to set
+        star.addEventListener('click', () => {
+          currentRating = parseInt(star.getAttribute('data-rating'), 10);
+          ratingInput.value = currentRating;
+          ratingError.style.display = 'none';
+          highlightStars(currentRating, 'active');
+        });
+      });
+
+      function highlightStars(count, className) {
+        starButtons.forEach((btn) => {
+          const val = parseInt(btn.getAttribute('data-rating'), 10);
+          btn.classList.remove('hovered', 'active');
+          if (val <= count) {
+            btn.classList.add(className);
+          }
+        });
+      }
+
+      // Feedback Form Submission with In-Memory Storage
+      feedbackForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        let isValid = true;
+
+        if (currentRating === 0) {
+          ratingError.style.display = 'block';
+          isValid = false;
+        } else {
+          ratingError.style.display = 'none';
+        }
+
+        const workedWellVal = workedWellInput.value.trim();
+        if (!workedWellVal) {
+          workedWellError.style.display = 'block';
+          isValid = false;
+        } else {
+          workedWellError.style.display = 'none';
+        }
+
+        if (!isValid) return;
+
+        const nameVal = document.getElementById('feedback-name').value.trim() || 'Anonymous Citizen';
+        const improveVal = document.getElementById('feedback-improve').value.trim();
+
+        // Store entry in-memory only (NO localStorage)
+        const feedbackEntry = {
+          name: nameVal,
+          rating: currentRating,
+          workedWell: workedWellVal,
+          improve: improveVal,
+          timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+        };
+        inMemoryFeedbackStore.push(feedbackEntry);
+
+        // Prepare Email Notification to group2aiproject@gmail.com
+        const recipientEmail = "group2aiproject@gmail.com";
+        const emailSubject = `[GUIA AI Feedback] ${feedbackEntry.rating} Stars from ${feedbackEntry.name}`;
+        const emailBody = 
+`==============================================
+GUIA AI - STAKEHOLDER FEEDBACK REPORT
+==============================================
+Submitter: ${feedbackEntry.name}
+Overall Rating: ${feedbackEntry.rating} / 5 Stars
+Submission Timestamp: ${new Date().toLocaleString()}
+
+1. What worked well:
+${feedbackEntry.workedWell}
+
+2. What should we improve:
+${feedbackEntry.improve || 'None mentioned'}
+
+Recipient Notification: ${recipientEmail}
+Sent from GUIA AI Bureaucracy Navigator
+==============================================`;
+
+        const mailtoUrl = `mailto:${recipientEmail}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+
+        // Attempt automated dispatch via mail client/Gmail
+        try {
+          const mailWindow = window.open(mailtoUrl, '_blank');
+          if (!mailWindow) {
+            // Popup was blocked or handled by protocol handler
+            window.location.href = mailtoUrl;
+          }
+        } catch (err) {
+          console.warn("Mail client direct launch: ", err);
+        }
+
+        // Render Email Action Buttons in the Success Notification Area
+        const emailActionArea = document.getElementById('email-action-area');
+        if (emailActionArea) {
+          emailActionArea.innerHTML = `
+            <div style="display:flex; flex-direction:column; gap:8px; align-items:center;">
+              <a href="${mailtoUrl}" target="_blank" class="submit-feedback-btn" style="text-decoration:none; padding:10px 20px; font-size:0.9rem; width:100%; max-width:360px; justify-content:center;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                Send via Gmail / Mail Client
+              </a>
+              <button type="button" id="copy-email-report-btn" class="btn-official-site" style="font-size:0.82rem; padding:8px 16px; border-radius:var(--radius-sm); width:100%; max-width:360px; justify-content:center;">
+                Copy Report to Clipboard
+              </button>
+            </div>
+          `;
+
+          const copyBtn = document.getElementById('copy-email-report-btn');
+          if (copyBtn) {
+            copyBtn.addEventListener('click', () => {
+              navigator.clipboard.writeText(emailBody).then(() => {
+                copyBtn.textContent = '✓ Report Copied to Clipboard!';
+                setTimeout(() => {
+                  copyBtn.textContent = 'Copy Report to Clipboard';
+                }, 2500);
+              });
+            });
+          }
+        }
+
+        // Update UI
+        feedbackForm.style.display = 'none';
+        feedbackSuccessMsg.style.display = 'block';
+
+        // Render session in-memory feedback preview
+        recentFeedbackContainer.style.display = 'block';
+        const itemElem = document.createElement('div');
+        itemElem.className = 'recent-item';
+        itemElem.innerHTML = `
+          <div style="display:flex; justify-content:space-between; margin-bottom: 4px;">
+            <strong style="color: #ffffff;">${escapeHTML(feedbackEntry.name)}</strong>
+            <span style="color: var(--accent-gold);">${'★'.repeat(feedbackEntry.rating)}${'☆'.repeat(5 - feedbackEntry.rating)}</span>
+          </div>
+          <p style="color: var(--text-secondary); margin-bottom: 2px;"><em>"${escapeHTML(feedbackEntry.workedWell)}"</em></p>
+          ${feedbackEntry.improve ? `<p style="color: var(--text-muted); font-size: 0.8rem;">Improvement idea: ${escapeHTML(feedbackEntry.improve)}</p>` : ''}
+          <div style="font-size: 0.72rem; color: var(--accent-cyan); margin-top: 4px;">
+            Recorded & Email Prepared for group2aiproject@gmail.com · ${feedbackEntry.timestamp}
+          </div>
+        `;
+        feedbackItems.prepend(itemElem);
+      });
+
+      // Submit Another Response Handler
+      const submitAnotherBtn = document.getElementById('btn-submit-another');
+      if (submitAnotherBtn) {
+        submitAnotherBtn.addEventListener('click', () => {
+          feedbackForm.reset();
+          currentRating = 0;
+          ratingInput.value = '0';
+          highlightStars(0, 'active');
+          feedbackSuccessMsg.style.display = 'none';
+          feedbackForm.style.display = 'flex';
+        });
+      }
+
+      // Helper function to sanitize user input for in-memory rendering
+      function escapeHTML(str) {
+        return str.replace(/[&<>'"]/g, 
+          tag => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            "'": '&#39;',
+            '"': '&quot;'
+          }[tag] || tag)
+        );
+      }
+
+      // 8. Parallax Scrolling Abstract Geometric Pattern Logic
+      const parallaxLayer1 = document.getElementById('parallax-layer-1');
+      const parallaxLayer2 = document.getElementById('parallax-layer-2');
+      const parallaxLayer3 = document.getElementById('parallax-layer-3');
+
+      let lastParallaxScroll = 0;
+      let parallaxTicking = false;
+
+      function updateGeometricParallax(scrollPos) {
+        if (parallaxLayer1) {
+          parallaxLayer1.style.transform = `translate3d(0, ${scrollPos * 0.08}px, 0)`;
+        }
+        if (parallaxLayer2) {
+          parallaxLayer2.style.transform = `translate3d(0, ${scrollPos * -0.14}px, 0) rotate(${scrollPos * 0.008}deg)`;
+        }
+        if (parallaxLayer3) {
+          parallaxLayer3.style.transform = `translate3d(0, ${scrollPos * -0.22}px, 0)`;
+        }
+      }
+
+      window.addEventListener('scroll', () => {
+        lastParallaxScroll = window.scrollY;
+        if (!parallaxTicking) {
+          window.requestAnimationFrame(() => {
+            updateGeometricParallax(lastParallaxScroll);
+            parallaxTicking = false;
+          });
+          parallaxTicking = true;
+        }
+      }, { passive: true });
+
+      // Initialize on page load
+      updateGeometricParallax(window.scrollY);
+    </script>
+  </body>
+</html>

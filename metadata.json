@@ -1,0 +1,6 @@
+{
+  "name": "GUIA AI - Bureaucracy Navigator",
+  "description": "Simplifying Indian Bureaucracy through Artificial Intelligence. Step-by-step guidance for Aadhaar, PAN, Passport, and official paperwork.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
